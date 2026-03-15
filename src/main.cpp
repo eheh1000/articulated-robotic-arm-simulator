@@ -1,5 +1,5 @@
 #include <iostream>
-#include "CJoint.hpp"
+#include "../include/CJoint.hpp"
 
 int main() {
 	CJointRevolute jointRevolute(0.0, 0.5, -3.14, 3.14);
