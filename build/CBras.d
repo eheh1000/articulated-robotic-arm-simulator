@@ -1,4 +1,4 @@
-build/main.o: src/main.cpp src/../include/CBras.hpp \
+build/CBras.o: src/CBras.cpp src/../include/CBras.hpp \
  src/../include/CJoint.hpp /usr/include/eigen3/Eigen/Dense \
  /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \

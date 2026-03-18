@@ -4,10 +4,10 @@
 
 // CONSTRUCTEURS
 
-CJoint::CJoint(double q_, double qMin_, double qMax_){
-    this->q_ = q_;
+CJoint::CJoint(double qMin_, double qMax_, double q_){
     this->qMin_ = qMin_;
     this->qMax_ = qMax_;
+    this->q_ = q_;
 }
 
 CJoint::CJoint(){

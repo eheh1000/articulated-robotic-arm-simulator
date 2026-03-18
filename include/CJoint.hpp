@@ -14,7 +14,7 @@ protected:
 
 public:
     CJoint();
-    CJoint(double q_, double qMin_, double qMax_);
+    CJoint(double qMin_, double qMax_, double q_);
     virtual ~CJoint();
     virtual Mat4 getTransform() const = 0;
     virtual std::string getTypeName() const = 0;
@@ -32,8 +32,8 @@ private :
     double dx_;
 public:
     CJointRevolute();
-    CJointRevolute(double dx_, double q_, double qMin_, double qMax_) :
-                    CJoint(q_, qMin_, qMax_), dx_(dx_){};
+    CJointRevolute(double qMin_, double qMax_, double q_, double dx_) :
+                    CJoint(qMin_, qMax_, q_), dx_(dx_){};
     virtual Mat4 getTransform() const override;
     virtual std::string getTypeName() const override;
     virtual std::unique_ptr<CJoint> clone() const override;
@@ -47,8 +47,8 @@ class CJointPrismatic : public CJoint
 
 public:
     CJointPrismatic();
-    CJointPrismatic(double q_, double qMin_, double qMax_) :
-                    CJoint(q_, qMin_, qMax_){};
+    CJointPrismatic(double qMin_, double qMax_, double q_) :
+                    CJoint(qMin_, qMax_, q_){};
     virtual Mat4 getTransform() const override;
     virtual std::string getTypeName() const override;
     virtual std::unique_ptr<CJoint> clone() const override;
